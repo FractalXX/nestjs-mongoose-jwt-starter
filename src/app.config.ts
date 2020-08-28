@@ -23,5 +23,5 @@ export default (): any => {
       passwordSaltRounds: parseInt(PASSWORD_SALT_ROUNDS, 10),
       jwtSecretKey: JWT_SECRET_KEY,
     },
-  }
+  };
 };

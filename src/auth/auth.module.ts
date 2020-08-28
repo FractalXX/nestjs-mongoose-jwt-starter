@@ -14,9 +14,7 @@ import { UserService } from './user.service';
   imports: [
     ConfigModule,
     PassportModule,
-    MongooseModule.forFeature([
-      { name: User.name, schema: UserSchema },
-    ]),
+    MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
     JwtModule.registerAsync({
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
@@ -31,4 +29,4 @@ import { UserService } from './user.service';
   providers: [UserService, AuthService, LocalStrategy, JwtStrategy],
   controllers: [AuthController],
 })
-export class AuthModule { }
+export class AuthModule {}
